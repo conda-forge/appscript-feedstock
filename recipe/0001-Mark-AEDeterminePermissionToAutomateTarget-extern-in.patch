@@ -1,0 +1,30 @@
+From 6782f90a788e35736bc1e359c198a25369168cfd Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Sun, 17 Mar 2019 09:05:42 -0500
+Subject: [PATCH] Mark AEDeterminePermissionToAutomateTarget extern in
+ appscript_2x too
+
+---
+ appscript_2x/ext/ae.c | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/appscript_2x/ext/ae.c b/appscript_2x/ext/ae.c
+index 6cbab8b..3340492 100644
+--- a/appscript_2x/ext/ae.c
++++ b/appscript_2x/ext/ae.c
+@@ -44,6 +44,12 @@ AEEventHandlerUPP upp_GenericEventHandler;
+ AECoercionHandlerUPP upp_GenericCoercionHandler;
+ 
+ 
++extern OSStatus AEDeterminePermissionToAutomateTarget(const AEAddressDesc* target, 
++													  AEEventClass theAEEventClass, 
++													  AEEventID theAEEventID, 
++													  Boolean askUserIfNeeded) __attribute__((weak_import));
++
++
+ /* --------------------------- MacOSError ---------------------------- */
+ 
+ /* Exception object used by AE extension for OS errors */
+-- 
+2.19.1
+
