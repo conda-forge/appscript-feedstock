@@ -5,7 +5,7 @@ Home: http://appscript.sourceforge.net
 
 Package license: Public Domain
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Control AppleScriptable applications from Python.
 
