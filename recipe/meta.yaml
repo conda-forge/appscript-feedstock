@@ -14,7 +14,7 @@ source:
     - 0001-Mark-AEDeterminePermissionToAutomateTarget-extern-in.patch
 
 build:
-  number: 1
+  number: 2
   skip: true  # [not osx]
   script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
