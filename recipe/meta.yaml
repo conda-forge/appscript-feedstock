@@ -1,6 +1,6 @@
 {% set name = "appscript" %}
-{% set version = "1.1.2" %}
-{% set sha256 = "15727bda6f4049be5436e1974461f96b088d14ad154950417a7cda04587e6097" %}
+{% set version = "1.2.0" %}
+{% set sha256 = "18bcccca6b993024d7797acf0d924e4531b4275567e250120e2ca72c0f50a537" %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,7 @@ source:
     - 0001-Mark-AEDeterminePermissionToAutomateTarget-extern-in.patch
 
 build:
-  number: 1
+  number: 0
   skip: true  # [not osx]
   script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
