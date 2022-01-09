@@ -1,0 +1,25 @@
+From da69eb196d0b22ff6129945eed92a498c71408b0 Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Sun, 9 Jan 2022 08:58:25 -0500
+Subject: [PATCH] Drop bad valued MAC_OS_X_VERSION_MIN_REQUIRED
+
+The value should be a version, not another macro
+---
+ setup.py | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/setup.py b/setup.py
+index 482ff5f..1c6b3c7 100644
+--- a/setup.py
++++ b/setup.py
+@@ -24,7 +24,6 @@ setup(
+ 			Extension('aem.ae',
+ 				sources=['ext/ae.c'],
+ 				extra_compile_args=[
+-						'-DMAC_OS_X_VERSION_MIN_REQUIRED=MAC_OS_X_VERSION_10_12', 
+ 						'-D__LP64__', # build fails on 10.14 due to Carbon.h issues unless this is explicitly declared
+ 				],
+ 				extra_link_args=[
+-- 
+2.34.1
+

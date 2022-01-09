@@ -10,6 +10,8 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
+  patches:
+    - 0001-Drop-bad-valued-MAC_OS_X_VERSION_MIN_REQUIRED.patch
 
 build:
   number: 0
@@ -26,6 +28,7 @@ requirements:
 
   run:
     - python
+    - lxml >=4.7.1
 
 test:
   imports:
