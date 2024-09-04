@@ -14,7 +14,7 @@ source:
     - 0001-Drop-bad-valued-MAC_OS_X_VERSION_MIN_REQUIRED.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [not osx]
   script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
@@ -23,6 +23,7 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - python
     - pip
