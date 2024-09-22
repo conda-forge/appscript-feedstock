@@ -12,6 +12,7 @@ source:
   sha256: {{ sha256 }}
   patches:
     - 0001-Drop-bad-valued-MAC_OS_X_VERSION_MIN_REQUIRED.patch
+    - 0002-Compatibility-for-Python-3.13.patch
 
 build:
   number: 1
