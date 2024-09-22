@@ -1,7 +1,7 @@
-From da69eb196d0b22ff6129945eed92a498c71408b0 Mon Sep 17 00:00:00 2001
+From b45192fb75d97bd85f38fd923ffb7871bd4ee712 Mon Sep 17 00:00:00 2001
 From: Nehal J Wani <nehaljw.kkd1@gmail.com>
 Date: Sun, 9 Jan 2022 08:58:25 -0500
-Subject: [PATCH] Drop bad valued MAC_OS_X_VERSION_MIN_REQUIRED
+Subject: [PATCH 1/2] Drop bad valued MAC_OS_X_VERSION_MIN_REQUIRED
 
 The value should be a version, not another macro
 ---
@@ -21,5 +21,5 @@ index 482ff5f..1c6b3c7 100644
  				],
  				extra_link_args=[
 -- 
-2.34.1
+2.45.2
 
