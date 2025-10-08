@@ -1,6 +1,6 @@
 {% set name = "appscript" %}
-{% set version = "1.3.0" %}
-{% set sha256 = "80943118bc97f9f78a8aa55f85565752ed4d82c7893427d7d9ebfdf401c12b2c" %}
+{% set version = "1.4.0" %}
+{% set sha256 = "b2c6fc770bf822ea45529c7084bc0ee340e67ab260016b01d28e0449ec8723be" %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,7 @@ source:
     - 0001-Drop-bad-valued-MAC_OS_X_VERSION_MIN_REQUIRED.patch
 
 build:
-  number: 1
+  number: 0
   skip: true  # [not osx]
   script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
